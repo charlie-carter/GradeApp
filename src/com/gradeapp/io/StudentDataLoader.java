@@ -1,6 +1,6 @@
 package com.gradeapp.io;
 
-import com.gradeapp.model.CourseRecord;
+import com.gradeapp.model.StandardCourse;
 import com.gradeapp.model.Student;
 
 import java.io.BufferedReader;
@@ -79,7 +79,7 @@ public class StudentDataLoader {
                 double t3 = Double.parseDouble(parts[4]);
                 double fe = Double.parseDouble(parts[5]);
 
-                CourseRecord course = new CourseRecord(code, t1, t2, t3, fe);
+                StandardCourse course = new StandardCourse(code, t1, t2, t3, fe);
 
                 Student student = database.getStudentById(id);
                 if (student != null) {

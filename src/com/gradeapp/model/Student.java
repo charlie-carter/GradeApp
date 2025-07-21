@@ -17,7 +17,7 @@ import java.util.List;
 public class Student {
     private final String id;
     private final String name;
-    private ArrayList<CourseRecord> courses;
+    private ArrayList<StandardCourse> courses;
 
     public Student(String id, String name) {
         this.id = id;
@@ -30,7 +30,7 @@ public class Student {
      *
      * @param course the course record to add
      */
-    public void addCourse(CourseRecord course) {
+    public void addCourse(StandardCourse course) {
         this.courses.add(course);
     }
 
@@ -48,7 +48,7 @@ public class Student {
      *
      * @return the list of courses
      */
-    public List<CourseRecord> getCourses() {
+    public List<StandardCourse> getCourses() {
         return courses;
     }
 

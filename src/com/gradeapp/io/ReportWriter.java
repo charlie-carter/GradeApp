@@ -1,6 +1,6 @@
 package com.gradeapp.io;
 
-import com.gradeapp.model.CourseRecord;
+import com.gradeapp.model.StandardCourse;
 import com.gradeapp.model.Student;
 
 import java.io.FileWriter;
@@ -36,7 +36,7 @@ public class ReportWriter {
 
 		try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
 			for (Student student : sortedStudents) {
-				for (CourseRecord course : student.getCourses()) {
+				for (StandardCourse course : student.getCourses()) {
 					double grade = course.calculateFinalGrade();
 					writer.printf("%s %s %s %.1f%n",
 							student.getId(),
